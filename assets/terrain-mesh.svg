@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 420" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Abstract topographic terrain mesh">
+  <defs>
+    <linearGradient id="tm" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0"  stop-color="#D6A24A" stop-opacity="0.05"/>
+      <stop offset="0.55" stop-color="#D6A24A" stop-opacity="0.30"/>
+      <stop offset="1"  stop-color="#D6A24A" stop-opacity="0.12"/>
+    </linearGradient>
+    <linearGradient id="tmfade" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0"    stop-color="#fff" stop-opacity="0"/>
+      <stop offset="0.22" stop-color="#fff" stop-opacity="1"/>
+      <stop offset="0.78" stop-color="#fff" stop-opacity="1"/>
+      <stop offset="1"    stop-color="#fff" stop-opacity="0"/>
+    </linearGradient>
+    <mask id="tmmask"><rect width="1200" height="420" fill="url(#tmfade)"/></mask>
+  </defs>
+
+  <rect width="1200" height="420" fill="#0A0B0D"/>
+
+  <g stroke="url(#tm)" stroke-width="1.1" fill="none" mask="url(#tmmask)">
+    <path d="M-20 130 C 150 116, 330 136, 480 120 C 640 110, 820 137, 980 122 C 1100 113, 1180 128, 1220 123"/>
+    <path d="M-20 158 C 150 142, 330 165, 480 147 C 640 136, 820 166, 980 150 C 1100 140, 1180 156, 1220 151"/>
+    <path d="M-20 186 C 150 168, 330 193, 480 174 C 640 161, 820 195, 980 177 C 1100 166, 1180 184, 1220 178"/>
+    <path d="M-20 214 C 150 193, 330 222, 480 201 C 640 185, 820 225, 980 205 C 1100 192, 1180 212, 1220 206"/>
+    <path d="M-20 242 C 150 218, 330 252, 480 228 C 640 209, 820 256, 980 233 C 1100 218, 1180 240, 1220 234"/>
+    <path d="M-20 270 C 150 242, 330 281, 480 254 C 640 232, 820 286, 980 260 C 1100 242, 1180 267, 1220 261"/>
+    <path d="M-20 298 C 150 266, 330 311, 480 280 C 640 253, 820 316, 980 286 C 1100 266, 1180 294, 1220 288"/>
+    <path d="M-20 326 C 150 289, 330 341, 480 305 C 640 274, 820 348, 980 312 C 1100 289, 1180 322, 1220 315"/>
+    <path d="M-20 356 C 150 314, 330 373, 480 332 C 640 297, 820 381, 980 339 C 1100 314, 1180 351, 1220 343"/>
+  </g>
+
+  <g stroke="#ffffff" stroke-opacity="0.045" stroke-width="1" mask="url(#tmmask)">
+    <path d="M200 120 L196 392"/>
+    <path d="M360 122 L352 392"/>
+    <path d="M520 120 L516 392"/>
+    <path d="M680 116 L690 392"/>
+    <path d="M840 124 L856 392"/>
+    <path d="M1000 122 L1016 392"/>
+  </g>
+</svg>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Accessibility — Scrye</title>
+  <meta name="description" content="Scrye's commitment to digital accessibility, targeting WCAG 2.1 Level AA, and how to report a barrier." />
+  <meta name="robots" content="noindex, nofollow" />
+  <meta name="theme-color" content="#0A0B0D" />
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body class="subpage">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="nav" id="nav">
+    <div class="container nav__inner">
+      <a class="brand" href="index.html" aria-label="Scrye — home">
+        <svg class="brand__mark" viewBox="0 0 32 32" aria-hidden="true">
+          <circle cx="16" cy="16" r="3.2" /><circle cx="16" cy="16" r="8" /><circle cx="16" cy="16" r="13" />
+          <path d="M16 1 L16 6 M16 26 L16 31 M1 16 L6 16 M26 16 L31 16" />
+        </svg>
+        <span class="brand__name">Scrye</span>
+      </a>
+      <nav class="nav__links" aria-label="Primary">
+        <a href="index.html#capabilities">Capabilities</a>
+        <a href="index.html#approach">Approach</a>
+        <a href="about.html">About</a>
+        <a class="nav__cta" href="index.html#contact">Request a briefing</a>
+      </nav>
+      <button class="nav__toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="mobile-menu" id="mobileMenu" hidden>
+      <a href="index.html#capabilities">Capabilities</a>
+      <a href="index.html#approach">Approach</a>
+      <a href="about.html">About</a>
+      <a href="index.html#contact">Request a briefing</a>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="page-hero">
+      <div class="container">
+        <p class="eyebrow"><span class="eyebrow__dot"></span>Legal</p>
+        <h1>Accessibility Statement</h1>
+        <p class="page-hero__meta">Effective June 8, 2026</p>
+      </div>
+    </section>
+
+    <section class="section section--article">
+      <div class="container prose">
+        <p class="prose__intro">Scrye is committed to making this website accessible to the widest possible audience, regardless of ability or technology. We view accessibility as part of building tools for people who operate under real-world constraints.</p>
+
+        <h2>Conformance target</h2>
+        <p>We aim to conform to the World Wide Web Consortium's <strong>Web Content Accessibility Guidelines (WCAG) 2.1, Level AA</strong>. These guidelines explain how to make web content more accessible to people with a wide range of disabilities.</p>
+
+        <h2>Measures we take</h2>
+        <ul>
+          <li>Semantic HTML structure, landmark regions, and a logical heading order.</li>
+          <li>Full keyboard navigability with a visible focus indicator and a &ldquo;skip to content&rdquo; link.</li>
+          <li>Text and interface colors chosen to meet WCAG AA contrast ratios.</li>
+          <li>Respect for the operating-system &ldquo;reduced motion&rdquo; preference; animation is minimized or disabled accordingly.</li>
+          <li>Text alternatives for meaningful images; purely decorative graphics are hidden from assistive technologies.</li>
+          <li>Clearly labeled form controls and status messages announced to assistive technology.</li>
+          <li>A responsive layout that supports text resizing and zoom without loss of content or function.</li>
+        </ul>
+
+        <h2>Known limitations</h2>
+        <p>We are continually improving. Despite our efforts, some content may not yet fully conform to WCAG 2.1 AA. If you encounter a barrier, please let us know — we treat accessibility issues as defects to be fixed.</p>
+
+        <h2>Feedback and contact</h2>
+        <p>If you experience any difficulty accessing any part of this Site, please email <a href="mailto:contact@scrye.example">contact@scrye.example</a> with &ldquo;Accessibility&rdquo; in the subject line. Please describe the issue, the page involved, and the browser or assistive technology you were using. We aim to acknowledge feedback within five business days and to resolve issues as promptly as we reasonably can.</p>
+
+        <h2>Compatibility</h2>
+        <p>This Site is designed to work with current versions of major web browsers and assistive technologies. It may not be fully compatible with outdated browsers or software.</p>
+
+        <a class="backlink" href="index.html">← Back to home</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <svg class="brand__mark" viewBox="0 0 32 32" aria-hidden="true">
+          <circle cx="16" cy="16" r="3.2" /><circle cx="16" cy="16" r="8" /><circle cx="16" cy="16" r="13" />
+          <path d="M16 1 L16 6 M16 26 L16 31 M1 16 L6 16 M26 16 L31 16" />
+        </svg>
+        <span class="brand__name">Scrye</span>
+      </div>
+      <nav class="footer__links" aria-label="Footer">
+        <a href="index.html#capabilities">Capabilities</a>
+        <a href="index.html#approach">Approach</a>
+        <a href="about.html">About</a>
+        <a href="index.html#contact">Contact</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+        <a href="accessibility.html">Accessibility</a>
+        <a href="mailto:careers@scrye.example">Careers — by introduction</a>
+      </nav>
+      <div class="footer__fineprint">
+        <p><strong>Forward-looking &amp; illustrative.</strong> Information on this site is provided for general informational purposes and describes capabilities in development and in concept. It is not a commitment, warranty, or guarantee of any specific feature, performance, or result.</p>
+        <p><strong>No offer.</strong> Nothing on this site constitutes an offer to sell or a solicitation of an offer to buy any security, product, or service.</p>
+        <p><strong>Export control.</strong> This site contains only general, publicly releasable information. Certain technologies referenced may be subject to U.S. export control laws and regulations (ITAR / EAR); related details are provided only under appropriate agreement and in compliance with applicable law.</p>
+      </div>
+      <p class="footer__legal">© <span id="year">2026</span> Scrye. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
