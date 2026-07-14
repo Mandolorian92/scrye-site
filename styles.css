@@ -14,9 +14,9 @@
   --text-dim:    #80868F;  /* WCAG AA: 5.37:1 on --bg (was #5E646E = 3.3:1, failed) */
   --line:        rgba(255, 255, 255, 0.09);
   --line-strong: rgba(255, 255, 255, 0.16);
-  --accent:      #D6A24A;
-  --accent-hi:   #E7B65E;
-  --accent-soft: rgba(214, 162, 74, 0.12);
+  --accent:      #E8811C;
+  --accent-hi:   #F2963A;
+  --accent-soft: rgba(232, 129, 28, 0.12);
 
   /* type */
   --font-sans: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
@@ -135,18 +135,13 @@ button, input, textarea { font: inherit; color: inherit; }
   font-weight: 600;
 }
 .brand__mark {
-  width: 26px; height: 26px;
-  fill: none;
-  stroke: var(--text);
-  stroke-width: 1.5;
-  stroke-linecap: round;
-  stroke-linejoin: round;
+  height: 30px; width: auto;
   flex: none;
 }
-.brand__name {
-  font-size: 17px;
-  letter-spacing: 0.28em;
-  text-transform: uppercase;
+.brand__wordmark {
+  height: 17px; width: auto;
+  display: block;
+  flex: none;
 }
 
 .nav__links {
@@ -587,7 +582,8 @@ button, input, textarea { font: inherit; color: inherit; }
 }
 .footer__inner { display: grid; gap: 26px; }
 .footer__brand { display: inline-flex; align-items: center; gap: 11px; }
-.footer__brand .brand__name { font-size: 15px; letter-spacing: 0.28em; text-transform: uppercase; }
+.footer__brand .brand__mark { height: 26px; }
+.footer__brand .brand__wordmark { height: 15px; }
 .footer__links {
   display: flex;
   flex-wrap: wrap;
