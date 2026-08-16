@@ -3,29 +3,46 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Scrye</title>
-  <meta name="description" content="Scrye — geospatial decision tools." />
-  <meta name="robots" content="noindex, nofollow" />
+
+  <!-- BRAND = "Scrye". Mark = the official scrying-orb logo, recreated as inline
+       <svg class="brand__mark"> (nav + footer) + assets/favicon.svg. Wordmark is
+       live text (CSS uppercase + tracking). Contact = shell for now (no live email/form yet). -->
+
+  <title>Scrye — Rapid change detection &amp; geospatial decision intelligence</title>
+  <meta name="description" content="Scrye turns imagery and elevation into decision-ready intelligence — detecting change over time, grading its own confidence, and working online or fully offline. For defense and commercial teams alike." />
+
+  <!-- Indexable so partners / insurers / investors can find it. To go stealth, use content="noindex, nofollow". -->
+  <meta name="robots" content="index, follow" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Scrye — Rapid change detection &amp; geospatial decision intelligence" />
+  <meta property="og:description" content="Detect change, grade confidence, decide faster — online or fully offline. One geospatial engine for defense and commercial missions." />
+
   <meta name="theme-color" content="#0A0B0D" />
-  <link rel="icon" type="image/png" href="assets/favicon.png" />
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
   <link rel="stylesheet" href="styles.css?v=4" />
 </head>
 
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
 
-    <header class="nav" id="nav">
+  <!-- ───────────────────────── NAV ───────────────────────── -->
+  <header class="nav" id="nav">
     <div class="container nav__inner">
       <a class="brand" href="#top" aria-label="Scrye — home">
-        <img class="brand__mark" src="assets/scrye-mark.png" alt="" width="30" height="30" />
-        <img class="brand__wordmark" src="assets/scrye-wordmark.svg" alt="Scrye" height="17" />
+        <svg class="brand__mark" viewBox="0 0 32 32" aria-hidden="true">
+          <circle cx="16" cy="13" r="8.4" />
+          <path d="M12.8 6.9a8.4 8.4 0 0 0-4.1 4.1" />
+          <path d="M11 24h10l3 3.6H8z" />
+        </svg>
+        <span class="brand__name">Scrye</span>
       </a>
 
       <nav class="nav__links" aria-label="Primary">
         <a href="#capabilities">Capabilities</a>
         <a href="#applications">Applications</a>
         <a href="#about">About</a>
-        <a class="nav__cta" href="#contact">Request access</a>
+        <a class="nav__cta" href="#contact">Request a briefing</a>
       </nav>
 
       <button class="nav__toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
@@ -37,21 +54,23 @@
       <a href="#capabilities">Capabilities</a>
       <a href="#applications">Applications</a>
       <a href="#about">About</a>
-      <a href="#contact">Request access</a>
+      <a href="#contact">Request a briefing</a>
     </div>
   </header>
 
   <main id="main">
     <span id="top"></span>
 
-        <section class="hero">
+    <!-- ───────────────────────── HERO ───────────────────────── -->
+    <section class="hero">
       <div class="hero__photo" aria-hidden="true"></div>
       <svg class="topo" viewBox="0 0 1200 820" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
         <defs>
           <clipPath id="orbClip"><circle cx="900" cy="372" r="332" /></clipPath>
         </defs>
 
-                <g clip-path="url(#orbClip)">
+        <!-- terrain "scried" inside the orb -->
+        <g clip-path="url(#orbClip)">
           <g class="topo__rings">
             <ellipse cx="900" cy="372" rx="44"  ry="34"  />
             <ellipse cx="892" cy="366" rx="96"  ry="76"  />
@@ -64,11 +83,13 @@
           <path class="orb-horizon" d="M560 372 H1240" />
         </g>
 
-                <circle class="orb-ring" cx="900" cy="372" r="332" />
+        <!-- the orb itself -->
+        <circle class="orb-ring" cx="900" cy="372" r="332" />
         <path class="orb-glint" d="M724 286 a 332 332 0 0 1 132 -104" />
         <path class="orb-stand" d="M812 704 H988 l46 60 H766 Z" />
 
-                <g class="topo__rings topo__rings--minor">
+        <!-- ambient contours, lower-left -->
+        <g class="topo__rings topo__rings--minor">
           <ellipse cx="180" cy="640" rx="40"  ry="30"  />
           <ellipse cx="176" cy="636" rx="92"  ry="70"  />
           <ellipse cx="186" cy="646" rx="156" ry="120" />
@@ -77,17 +98,17 @@
       </svg>
 
       <div class="container hero__inner">
-        <p class="eyebrow"><span class="eyebrow__dot"></span>Geospatial change detection · decision tools</p>
+        <p class="eyebrow"><span class="eyebrow__dot"></span>Geospatial change detection · decision intelligence</p>
         <h1 class="hero__title">Reveal What's Hidden.</h1>
         <p class="hero__lead">
           Discover what imagery and terrain can tell you about the world below —
           then take it anywhere, online or off.
         </p>
         <div class="hero__actions">
-          <a class="btn btn--primary" href="#contact">Request access</a>
+          <a class="btn btn--primary" href="#contact">Request a briefing</a>
           <a class="btn btn--ghost" href="#capabilities">What we do <span aria-hidden="true">→</span></a>
         </div>
-        <p class="hero__avail"><span class="pulse"></span>Now engaging a small number of select partners.</p>
+        <p class="hero__avail"><span class="pulse"></span>Now engaging select defense and commercial partners.</p>
       </div>
 
       <a class="hero__scroll" href="#premise" aria-label="Scroll to learn more">
@@ -95,7 +116,8 @@
       </a>
     </section>
 
-        <section class="premise" id="premise">
+    <!-- ───────────────────────── PREMISE ───────────────────────── -->
+    <section class="premise" id="premise">
       <div class="container">
         <p class="premise__text">
           Imagery has never been more abundant. Turning it into a
@@ -105,7 +127,8 @@
       </div>
     </section>
 
-        <section class="section showcase" id="difference">
+    <!-- ───────────────────────── SHOWCASE / WHY IT STANDS OUT ───────────────────────── -->
+    <section class="section showcase" id="difference">
       <div class="container showcase__grid">
         <div>
           <p class="eyebrow"><span class="eyebrow__idx">—</span>Why it stands out</p>
@@ -121,12 +144,13 @@
             <span></span><span></span><span></span>
             <span class="device-frame__tag">Operating picture</span>
           </div>
-          <img src="assets/showcase.jpg" alt="Satellite view of Earth at night with scattered city lights." width="1600" height="1000" />
+          <img src="assets/showcase.jpg" alt="NASA Black Marble satellite view of Earth at night — city lights glowing across Africa, Europe, and the Middle East." width="1600" height="1000" />
         </div>
       </div>
     </section>
 
-        <section class="section" id="capabilities">
+    <!-- ───────────────────────── CAPABILITIES ───────────────────────── -->
+    <section class="section" id="capabilities">
       <div class="container">
         <header class="section__head">
           <p class="eyebrow"><span class="eyebrow__idx">01</span>Capabilities</p>
@@ -148,7 +172,7 @@
               <span class="card__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 2 2 7l10 5 10-5-10-5Z"/><path d="M2 12l10 5 10-5"/><path d="M2 17l10 5 10-5"/></svg></span>
               <span class="card__num">02</span>
             </div>
-            <h3 class="card__title">From imagery to insight</h3>
+            <h3 class="card__title">From imagery to intelligence</h3>
             <p class="card__body">Scan, query, and ingest imagery and elevation from many sources into one clear, current picture.</p>
           </article>
 
@@ -191,22 +215,23 @@
       </div>
     </section>
 
-        <section class="section" id="applications">
+    <!-- ───────────────────────── APPLICATIONS (dual-use) ───────────────────────── -->
+    <section class="section" id="applications">
       <div class="container">
         <header class="section__head">
           <p class="eyebrow"><span class="eyebrow__idx">02</span>Applications</p>
-          <h2 class="section__title">One capability. Many uses.</h2>
-          <p class="section__sub">The same engine — rapid change detection and confidence-graded geospatial insight — wherever the question is &ldquo;what changed, and what does it mean?&rdquo;</p>
+          <h2 class="section__title">One capability. Many missions.</h2>
+          <p class="section__sub">The same engine — rapid change detection and confidence-graded geospatial intelligence — wherever the question is &ldquo;what changed, and what does it mean?&rdquo;</p>
         </header>
 
         <div class="cards">
           <article class="card reveal">
             <div class="card__top">
               <span class="card__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3 5 6v6c0 4.2 3 6.6 7 9 4-2.4 7-4.8 7-9V6l-7-3Z"/></svg></span>
-              <span class="card__num">Field</span>
+              <span class="card__num">Defense</span>
             </div>
-            <h3 class="card__title">Field &amp; remote sites</h3>
-            <p class="card__body">Situational awareness and terrain understanding for teams working in remote or hard-to-reach locations, including where connectivity is limited.</p>
+            <h3 class="card__title">Defense &amp; operational</h3>
+            <p class="card__body">Situational awareness and terrain understanding for teams operating in contested, austere, and disconnected environments — at the speed of the mission.</p>
           </article>
 
           <article class="card reveal">
@@ -239,7 +264,8 @@
       </div>
     </section>
 
-        <section class="section section--alt" id="approach">
+    <!-- ───────────────────────── APPROACH ───────────────────────── -->
+    <section class="section section--alt" id="approach">
       <div class="container">
         <header class="section__head">
           <p class="eyebrow"><span class="eyebrow__idx">03</span>Approach</p>
@@ -266,31 +292,34 @@
       </div>
     </section>
 
-        <section class="band">
+    <!-- ───────────────────────── IMAGE BAND (abstract terrain) ───────────────────────── -->
+    <section class="band">
       <img class="band__img" src="assets/band.jpg" alt="Aerial satellite view of terrain crossed by a winding road." />
       <div class="band__overlay">
         <div class="container">
-          <p class="band__caption">From the field<br /><span class="accent">to the enterprise.</span></p>
+          <p class="band__caption">From the tactical edge<br /><span class="accent">to the enterprise.</span></p>
         </div>
       </div>
     </section>
 
-        <section class="section section--alt" id="offline">
+    <!-- ───────────────────────── OFFLINE / EDGE (ATAK) ───────────────────────── -->
+    <section class="section section--alt" id="offline">
       <div class="container showcase__grid">
-        <div class="edge__media" role="img" aria-label="A handheld device running a map application, used offline in the field"></div>
+        <div class="edge__media" role="img" aria-label="A rugged handheld running a tactical map application, used offline in the field"></div>
         <div>
           <p class="eyebrow"><span class="eyebrow__idx">—</span>Offline-first</p>
           <p class="showcase__lead">No signal?<br /><span class="accent">Full capability.</span></p>
           <ul class="showcase__points">
             <li>Runs fully disconnected — scan, detect change, and build decision-ready products with zero connectivity.</li>
-            <li>Outputs load straight onto the devices your teams already carry, in the formats they already use.</li>
+            <li>Outputs load straight onto the devices your teams already carry, including ATAK, for use at the edge.</li>
             <li>Sync when you're back in range. The network is a convenience, never a requirement.</li>
           </ul>
         </div>
       </div>
     </section>
 
-        <section class="manifesto" id="principles">
+    <!-- ───────────────────────── PRINCIPLES / MANIFESTO ───────────────────────── -->
+    <section class="manifesto" id="principles">
       <div class="container">
         <p class="eyebrow eyebrow--center"><span class="eyebrow__idx">04</span>Principles</p>
         <p class="manifesto__line">
@@ -307,49 +336,75 @@
       </div>
     </section>
 
-        <section class="section section--alt" id="about">
+    <!-- ───────────────────────── ABOUT ───────────────────────── -->
+    <section class="section section--alt" id="about">
       <div class="container">
         <header class="section__head">
           <p class="eyebrow"><span class="eyebrow__idx">05</span>About</p>
-          <h2 class="section__title">A small, experienced team.</h2>
+          <h2 class="section__title">Built by people who've lived the problem.</h2>
         </header>
 
-        <div class="about__grid about__grid--single">
+        <div class="about__grid">
           <div>
-            <p class="about__lead">We are a small, experienced team building decision-grade geospatial tools for everyone who has to make a call from imagery.</p>
+            <p class="about__lead">A small, focused team building decision-grade geospatial tools for everyone who has to make a call from imagery — whether they're at the tactical edge or behind an enterprise desk.</p>
             <div class="about__body">
-              <p>Our work sits at the intersection of geospatial analysis and disciplined software delivery. We focus on turning imagery and elevation into clear, current answers — and on being honest about how far each answer can be trusted.</p>
-              <p>That shapes a single conviction: a tool used at the hardest moment must be honest about what it knows. Everything we build follows from that. <a href="about.html">Read more about us →</a></p>
+              <p>Our work sits at the intersection of geospatial analysis, intelligence tradecraft, and disciplined software delivery. We have planned and run operations in the field, built and shipped mission systems, and felt first-hand the gap between the data available and the decision required.</p>
+              <p>That experience shapes a single conviction: a tool used at the hardest moment must be honest about what it knows. Everything we build follows from that. <a href="about.html">Read more about us →</a></p>
             </div>
           </div>
+
+          <aside class="founder">
+            <div class="founder__head">
+              <span class="founder__avatar"><img src="assets/founder.svg" alt="Amando Acosta, Founder" width="72" height="72" /></span>
+              <div>
+                <div class="founder__name">Amando Acosta</div>
+                <div class="founder__role">Founder &amp; CEO</div>
+              </div>
+            </div>
+            <div class="founder__bio">
+              <p>A U.S. Army intelligence veteran with over a decade delivering geospatial and mission-critical systems across defense, intelligence, and national-security organizations — from tactical teams in the field to enterprise software programs.</p>
+            </div>
+            <ul class="founder__creds">
+              <li>M.A., International Business &amp; Policy — Georgetown University</li>
+              <li>Project Management Professional (PMP)</li>
+              <li>U.S. Army All-Source Intelligence Analyst</li>
+            </ul>
+          </aside>
         </div>
       </div>
     </section>
 
-        <section class="section contact" id="contact">
+    <!-- ───────────────────────── CONTACT ───────────────────────── -->
+    <section class="section contact" id="contact">
       <div class="container contact__grid">
         <div class="contact__intro">
           <p class="eyebrow"><span class="eyebrow__idx">06</span>Contact</p>
-          <h2 class="section__title">By introduction only.</h2>
+          <h2 class="section__title">Briefings by request.</h2>
           <p class="contact__lead">
-            We work with a small, select group of partners
+            We work with a select group of partners — across defense and commercial alike —
             who need to turn imagery into decisions they can stand behind.
           </p>
         </div>
 
         <div class="contact__panel">
           <p class="contact__soon"><span class="pulse"></span>Get in touch</p>
-          <p class="contact__soonsub">Access is by introduction only. If we already know each other, reach out through your existing contact.</p>
+          <p class="contact__soonsub">For briefings and inquiries, reach us directly.</p>
+          <p class="contact__direct"><a href="mailto:info@scryeinsights.com">info@scryeinsights.com</a></p>
         </div>
       </div>
     </section>
   </main>
 
-    <footer class="footer">
+  <!-- ───────────────────────── FOOTER ───────────────────────── -->
+  <footer class="footer">
     <div class="container footer__inner">
       <div class="footer__brand">
-        <img class="brand__mark" src="assets/scrye-mark.png" alt="" width="30" height="30" />
-        <img class="brand__wordmark" src="assets/scrye-wordmark.svg" alt="Scrye" height="17" />
+        <svg class="brand__mark" viewBox="0 0 32 32" aria-hidden="true">
+          <circle cx="16" cy="13" r="8.4" />
+          <path d="M12.8 6.9a8.4 8.4 0 0 0-4.1 4.1" />
+          <path d="M11 24h10l3 3.6H8z" />
+        </svg>
+        <span class="brand__name">Scrye</span>
       </div>
 
       <nav class="footer__links" aria-label="Footer">
@@ -366,13 +421,14 @@
       <div class="footer__fineprint">
         <p><strong>Forward-looking &amp; illustrative.</strong> Information on this site is provided for general informational purposes and describes capabilities in development and in concept. It is not a commitment, warranty, or guarantee of any specific feature, performance, or result.</p>
         <p><strong>No offer.</strong> Nothing on this site constitutes an offer to sell or a solicitation of an offer to buy any security, product, or service.</p>
-        <p><strong>General information only.</strong> This site contains only general information. Use of any product or service is subject to a separate written agreement and to all applicable laws.</p>
+        <p><strong>Export control.</strong> This site contains only general, publicly releasable information. Certain technologies referenced may be subject to U.S. export control laws and regulations (ITAR / EAR); related details are provided only under appropriate agreement and in compliance with applicable law.</p>
       </div>
 
-      <p class="footer__legal">© <span id="year">2026</span> Scrye. All rights reserved.</p>
+      <p class="footer__legal">© <span id="year">2026</span> Scrye LLC. All rights reserved.</p>
     </div>
   </footer>
 
   <script src="main.js"></script>
+  <script defer src="https://cloud.umami.is/script.js" data-website-id="6c2b9000-b624-4407-827d-663142415365"></script>
 </body>
 </html>

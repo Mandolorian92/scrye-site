@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Scrye</title>
-  <meta name="description" content="Scrye — geospatial decision tools." />
-  <meta name="robots" content="noindex, nofollow" />
+  <title>About — Scrye</title>
+  <meta name="description" content="Scrye builds decision-grade geospatial tools for environments where the data is incomplete and the stakes are not. Founded by a U.S. Army intelligence veteran." />
+  <meta name="robots" content="index, follow" />
   <meta name="theme-color" content="#0A0B0D" />
-  <link rel="icon" type="image/png" href="assets/favicon.png" />
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
   <link rel="stylesheet" href="styles.css?v=3" />
 </head>
 
@@ -17,14 +17,18 @@
   <header class="nav" id="nav">
     <div class="container nav__inner">
       <a class="brand" href="index.html" aria-label="Scrye — home">
-        <img class="brand__mark" src="assets/scrye-mark.png" alt="" width="30" height="30" />
-        <img class="brand__wordmark" src="assets/scrye-wordmark.svg" alt="Scrye" height="17" />
+        <svg class="brand__mark" viewBox="0 0 32 32" aria-hidden="true">
+          <circle cx="16" cy="13" r="8.4" />
+          <path d="M12.8 6.9a8.4 8.4 0 0 0-4.1 4.1" />
+          <path d="M11 24h10l3 3.6H8z" />
+        </svg>
+        <span class="brand__name">Scrye</span>
       </a>
       <nav class="nav__links" aria-label="Primary">
         <a href="index.html#capabilities">Capabilities</a>
         <a href="index.html#approach">Approach</a>
         <a href="about.html" aria-current="page">About</a>
-        <a class="nav__cta" href="index.html#contact">Request access</a>
+        <a class="nav__cta" href="index.html#contact">Request a briefing</a>
       </nav>
       <button class="nav__toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
         <span></span><span></span><span></span>
@@ -34,7 +38,7 @@
       <a href="index.html#capabilities">Capabilities</a>
       <a href="index.html#approach">Approach</a>
       <a href="about.html">About</a>
-      <a href="index.html#contact">Request access</a>
+      <a href="index.html#contact">Request a briefing</a>
     </div>
   </header>
 
@@ -43,20 +47,41 @@
       <div class="container">
         <p class="eyebrow"><span class="eyebrow__dot"></span>About</p>
         <h1>Built by people who've<br />lived the problem.</h1>
-        <p class="page-hero__meta">Decision-grade geospatial tools.</p>
+        <p class="page-hero__meta">Decision-grade geospatial intelligence.</p>
       </div>
     </section>
 
     <section class="section">
-      <div class="container about__grid about__grid--single">
+      <div class="container about__grid">
         <div>
-          <p class="about__lead">We are a small, experienced team building decision-grade geospatial tools for everyone who has to make a call from imagery.</p>
+          <p class="about__lead">We are a small, focused team building decision-grade geospatial tools for everyone who has to make a call from imagery — whether they're at the tactical edge or behind an enterprise desk.</p>
           <div class="about__body">
-            <p>Our work sits at the intersection of geospatial analysis and disciplined software delivery. We focus on turning imagery and elevation into clear, current answers — and on being honest about how far each answer can be trusted.</p>
+            <p>Our work sits at the intersection of geospatial analysis, intelligence tradecraft, and disciplined software delivery. The people behind it have planned and run operations in the field, built and shipped mission systems, and felt first-hand the distance between the data that happens to be available and the decision that has to be made anyway.</p>
             <p>Most tools assume clean data, a reliable network, and time to think. The hardest moments offer none of the three. We build for those moments instead — and we treat honesty about uncertainty as a feature, not a footnote.</p>
-            <p>The same engine that helps one team read a changing landscape helps another judge a property or assess a site — rapid change detection and confidence-graded insight, wherever the decision is made. We work deliberately with a small, select group of partners, in compliance with applicable law.</p>
+            <p>The same engine that supports a team in a contested environment helps an insurer judge a property or an investor read a mine site — rapid change detection and confidence-graded intelligence, wherever the decision is made. We work deliberately with a select group of partners across defense and commercial markets, in compliance with applicable law and export-control regulations.</p>
           </div>
         </div>
+
+        <aside class="founder">
+          <div class="founder__head">
+            <span class="founder__avatar"><img src="assets/founder.svg" alt="Amando Acosta, Founder" width="72" height="72" /></span>
+            <div>
+              <div class="founder__name">Amando Acosta</div>
+              <div class="founder__role">Founder &amp; CEO</div>
+            </div>
+          </div>
+          <div class="founder__bio">
+            <p>A U.S. Army intelligence veteran with over a decade delivering geospatial and mission-critical systems across defense, intelligence, and national-security organizations — from tactical teams in the field to enterprise software programs.</p>
+            <p>His career has spanned all-source intelligence analysis, geospatial collection and production, and the program and product delivery that turns operational need into shipped capability. He has also built and operated ventures from the ground up, including a distributed solar-energy company in West Africa.</p>
+          </div>
+          <ul class="founder__creds">
+            <li>M.A., International Business &amp; Policy — Georgetown University</li>
+            <li>B.A., Political Science — Arizona State University</li>
+            <li>Project Management Professional (PMP)</li>
+            <li>Certified Scrum Product Owner (CSPO)</li>
+            <li>U.S. Army All-Source Intelligence Analyst</li>
+          </ul>
+        </aside>
       </div>
     </section>
 
@@ -78,7 +103,7 @@
     <section class="cta">
       <div class="container">
         <h2 class="section__title">Let's start a conversation.</h2>
-        <a class="btn btn--primary" href="index.html#contact">Request access</a>
+        <a class="btn btn--primary" href="index.html#contact">Request a briefing</a>
       </div>
     </section>
   </main>
@@ -86,8 +111,12 @@
   <footer class="footer">
     <div class="container footer__inner">
       <div class="footer__brand">
-        <img class="brand__mark" src="assets/scrye-mark.png" alt="" width="30" height="30" />
-        <img class="brand__wordmark" src="assets/scrye-wordmark.svg" alt="Scrye" height="17" />
+        <svg class="brand__mark" viewBox="0 0 32 32" aria-hidden="true">
+          <circle cx="16" cy="13" r="8.4" />
+          <path d="M12.8 6.9a8.4 8.4 0 0 0-4.1 4.1" />
+          <path d="M11 24h10l3 3.6H8z" />
+        </svg>
+        <span class="brand__name">Scrye</span>
       </div>
       <nav class="footer__links" aria-label="Footer">
         <a href="index.html#capabilities">Capabilities</a>
@@ -102,12 +131,13 @@
       <div class="footer__fineprint">
         <p><strong>Forward-looking &amp; illustrative.</strong> Information on this site is provided for general informational purposes and describes capabilities in development and in concept. It is not a commitment, warranty, or guarantee of any specific feature, performance, or result.</p>
         <p><strong>No offer.</strong> Nothing on this site constitutes an offer to sell or a solicitation of an offer to buy any security, product, or service.</p>
-        <p><strong>General information only.</strong> This site contains only general information. Use of any product or service is subject to a separate written agreement and to all applicable laws.</p>
+        <p><strong>Export control.</strong> This site contains only general, publicly releasable information. Certain technologies referenced may be subject to U.S. export control laws and regulations (ITAR / EAR); related details are provided only under appropriate agreement and in compliance with applicable law.</p>
       </div>
-      <p class="footer__legal">© <span id="year">2026</span> Scrye. All rights reserved.</p>
+      <p class="footer__legal">© <span id="year">2026</span> Scrye LLC. All rights reserved.</p>
     </div>
   </footer>
 
   <script src="main.js"></script>
+  <script defer src="https://cloud.umami.is/script.js" data-website-id="6c2b9000-b624-4407-827d-663142415365"></script>
 </body>
 </html>

@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 420" preserveAspectRatio="xMidYMid slice" role="img" aria-label="A lone operator silhouette on a ridgeline at dawn, holding a glowing handheld device">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0"    stop-color="#0A0B0D"/>
+      <stop offset="0.50" stop-color="#0C0D11"/>
+      <stop offset="0.74" stop-color="#241A09"/>
+      <stop offset="0.86" stop-color="#0E0B07"/>
+      <stop offset="1"    stop-color="#08080A"/>
+    </linearGradient>
+    <radialGradient id="dawn" cx="900" cy="300" r="340" gradientUnits="userSpaceOnUse">
+      <stop offset="0"   stop-color="#E7B65E" stop-opacity="0.30"/>
+      <stop offset="0.4" stop-color="#D6A24A" stop-opacity="0.13"/>
+      <stop offset="1"   stop-color="#D6A24A" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="scan" x1="0" y1="0" x2="1" y2="0.4">
+      <stop offset="0" stop-color="#E7B65E" stop-opacity="0.22"/>
+      <stop offset="1" stop-color="#E7B65E" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="420" fill="url(#sky)"/>
+  <rect width="1200" height="420" fill="url(#dawn)"/>
+
+  <!-- faint sky grid -->
+  <g stroke="#ffffff" stroke-opacity="0.04" stroke-width="1">
+    <path d="M0 70 H1200 M0 140 H1200 M0 210 H1200"/>
+    <path d="M300 0 V300 M600 0 V300 M900 0 V300"/>
+  </g>
+
+  <!-- orbital arc -->
+  <path d="M120 250 Q620 -40 1140 170" fill="none" stroke="#D6A24A" stroke-opacity="0.18" stroke-width="1"/>
+
+  <!-- distant objective marker (left, subtle) -->
+  <g opacity="0.5">
+    <path d="M250 286 L256 292 L250 298 L244 292 Z" fill="#D6A24A"/>
+    <circle cx="250" cy="292" r="11" fill="none" stroke="#D6A24A" stroke-opacity="0.4" stroke-width="1"/>
+  </g>
+
+  <!-- ridgelines (back to front) -->
+  <path d="M0 300 L120 270 L260 290 L420 250 L600 285 L780 255 L960 295 L1120 265 L1200 285 L1200 420 L0 420 Z" fill="#16181D"/>
+  <path d="M0 322 L160 302 L340 322 L520 296 L700 324 L900 300 L1080 326 L1200 306 L1200 420 L0 420 Z" fill="#0E1014"/>
+
+  <!-- scan fan from device over foreground -->
+  <path d="M900 308 L1090 350 L1050 396 Z" fill="url(#scan)"/>
+
+  <!-- operator silhouette -->
+  <g fill="#050608">
+    <circle cx="880" cy="300" r="6.2"/>
+    <rect x="873" y="307" width="14" height="29" rx="6.5"/>
+    <rect x="874" y="332" width="5" height="23" rx="2.5"/>
+    <rect x="881" y="332" width="5" height="23" rx="2.5"/>
+    <rect x="879" y="309" width="21" height="4.6" rx="2.3" transform="rotate(-7 880 311)"/>
+  </g>
+  <!-- device glow + screen -->
+  <circle cx="901" cy="307" r="13" fill="#E7B65E" fill-opacity="0.30"/>
+  <rect x="897" y="301" width="8" height="12" rx="1.5" fill="#0A0C10" stroke="#E7B65E" stroke-width="1"/>
+
+  <!-- front ridge (darkest, figure stands on it) -->
+  <path d="M0 348 L200 340 L420 356 L640 342 L860 358 L1040 344 L1200 360 L1200 420 L0 420 Z" fill="#060709"/>
+</svg>
