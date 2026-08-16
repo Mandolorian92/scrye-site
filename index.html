@@ -4,10 +4,6 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- BRAND = "Scrye". Mark = the official scrying-orb logo, recreated as inline
-       <svg class="brand__mark"> (nav + footer) + assets/favicon.svg. Wordmark is
-       live text (CSS uppercase + tracking). Contact = shell for now (no live email/form yet). -->
-
   <title>Scrye — Rapid change detection &amp; geospatial decision intelligence</title>
   <meta name="description" content="Scrye turns imagery and elevation into decision-ready intelligence — detecting change over time, grading its own confidence, and working online or fully offline. For defense and commercial teams alike." />
 
@@ -19,7 +15,7 @@
   <meta property="og:description" content="Detect change, grade confidence, decide faster — online or fully offline. One geospatial engine for defense and commercial missions." />
 
   <meta name="theme-color" content="#0A0B0D" />
-  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <link rel="icon" type="image/png" href="assets/favicon.png" />
   <link rel="stylesheet" href="styles.css?v=4" />
 </head>
 
@@ -30,11 +26,7 @@
   <header class="nav" id="nav">
     <div class="container nav__inner">
       <a class="brand" href="#top" aria-label="Scrye — home">
-        <svg class="brand__mark" viewBox="0 0 32 32" aria-hidden="true">
-          <circle cx="16" cy="13" r="8.4" />
-          <path d="M12.8 6.9a8.4 8.4 0 0 0-4.1 4.1" />
-          <path d="M11 24h10l3 3.6H8z" />
-        </svg>
+        <img class="brand__mark" src="assets/scrye-mark.png" alt="" width="30" height="30" />
         <span class="brand__name">Scrye</span>
       </a>
 
@@ -64,51 +56,21 @@
     <!-- ───────────────────────── HERO ───────────────────────── -->
     <section class="hero">
       <div class="hero__photo" aria-hidden="true"></div>
-      <svg class="topo" viewBox="0 0 1200 820" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
-        <defs>
-          <clipPath id="orbClip"><circle cx="900" cy="372" r="332" /></clipPath>
-        </defs>
-
-        <!-- terrain "scried" inside the orb -->
-        <g clip-path="url(#orbClip)">
-          <g class="topo__rings">
-            <ellipse cx="900" cy="372" rx="44"  ry="34"  />
-            <ellipse cx="892" cy="366" rx="96"  ry="76"  />
-            <ellipse cx="910" cy="380" rx="152" ry="120" />
-            <ellipse cx="884" cy="360" rx="214" ry="172" />
-            <ellipse cx="918" cy="388" rx="280" ry="226" />
-            <ellipse cx="876" cy="352" rx="350" ry="286" />
-            <ellipse cx="930" cy="396" rx="430" ry="350" />
-          </g>
-          <path class="orb-horizon" d="M560 372 H1240" />
-        </g>
-
-        <!-- the orb itself -->
-        <circle class="orb-ring" cx="900" cy="372" r="332" />
-        <path class="orb-glint" d="M724 286 a 332 332 0 0 1 132 -104" />
-        <path class="orb-stand" d="M812 704 H988 l46 60 H766 Z" />
-
-        <!-- ambient contours, lower-left -->
-        <g class="topo__rings topo__rings--minor">
-          <ellipse cx="180" cy="640" rx="40"  ry="30"  />
-          <ellipse cx="176" cy="636" rx="92"  ry="70"  />
-          <ellipse cx="186" cy="646" rx="156" ry="120" />
-          <ellipse cx="170" cy="632" rx="232" ry="180" />
-        </g>
-      </svg>
+      <img class="hero__mark" src="assets/scrye-mark.png" alt="" aria-hidden="true" />
 
       <div class="container hero__inner">
-        <p class="eyebrow"><span class="eyebrow__dot"></span>Geospatial change detection · decision intelligence</p>
+        <p class="eyebrow"><span class="eyebrow__dot"></span>Geospatial change detection · dual-use technology</p>
         <h1 class="hero__title">Reveal What's Hidden.</h1>
         <p class="hero__lead">
-          Discover what imagery and terrain can tell you about the world below —
-          then take it anywhere, online or off.
+          Scrye turns imagery and elevation into decision-ready intelligence —
+          dual-use technology for commercial, enterprise, and government teams
+          alike, online or fully offline.
         </p>
         <div class="hero__actions">
           <a class="btn btn--primary" href="#contact">Request a briefing</a>
           <a class="btn btn--ghost" href="#capabilities">What we do <span aria-hidden="true">→</span></a>
         </div>
-        <p class="hero__avail"><span class="pulse"></span>Now engaging select defense and commercial partners.</p>
+        <p class="hero__avail"><span class="pulse"></span>Now engaging commercial, enterprise, and government partners.</p>
       </div>
 
       <a class="hero__scroll" href="#premise" aria-label="Scroll to learn more">
@@ -399,11 +361,7 @@
   <footer class="footer">
     <div class="container footer__inner">
       <div class="footer__brand">
-        <svg class="brand__mark" viewBox="0 0 32 32" aria-hidden="true">
-          <circle cx="16" cy="13" r="8.4" />
-          <path d="M12.8 6.9a8.4 8.4 0 0 0-4.1 4.1" />
-          <path d="M11 24h10l3 3.6H8z" />
-        </svg>
+        <img class="brand__mark" src="assets/scrye-mark.png" alt="" width="30" height="30" />
         <span class="brand__name">Scrye</span>
       </div>
 

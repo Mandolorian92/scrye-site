@@ -14,9 +14,9 @@
   --text-dim:    #80868F;  /* WCAG AA: 5.37:1 on --bg (was #5E646E = 3.3:1, failed) */
   --line:        rgba(255, 255, 255, 0.09);
   --line-strong: rgba(255, 255, 255, 0.16);
-  --accent:      #D6A24A;
-  --accent-hi:   #E7B65E;
-  --accent-soft: rgba(214, 162, 74, 0.12);
+  --accent:      #E8811C;
+  --accent-hi:   #F2963A;
+  --accent-soft: rgba(232, 129, 28, 0.12);
 
   /* type */
   --font-sans: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
@@ -135,12 +135,7 @@ button, input, textarea { font: inherit; color: inherit; }
   font-weight: 600;
 }
 .brand__mark {
-  width: 26px; height: 26px;
-  fill: none;
-  stroke: var(--text);
-  stroke-width: 1.5;
-  stroke-linecap: round;
-  stroke-linejoin: round;
+  height: 30px; width: auto;
   flex: none;
 }
 .brand__name {
@@ -275,7 +270,7 @@ button, input, textarea { font: inherit; color: inherit; }
   top: -10%; right: -5%;
   width: 70vw; height: 70vw;
   max-width: 900px; max-height: 900px;
-  background: radial-gradient(circle, rgba(214,162,74,0.10), transparent 62%);
+  background: radial-gradient(circle, rgba(232,129,28,0.12), transparent 62%);
   pointer-events: none;
 }
 
@@ -285,6 +280,27 @@ button, input, textarea { font: inherit; color: inherit; }
   width: 100%; height: 100%;
   pointer-events: none;
   z-index: 1;
+}
+
+/* Hand-holding-globe hero mark */
+.hero__mark {
+  position: absolute;
+  top: 50%;
+  right: clamp(-32px, 2vw, 40px);
+  transform: translateY(-50%);
+  width: min(46vw, 520px);
+  height: auto;
+  z-index: 1;
+  pointer-events: none;
+  filter: drop-shadow(0 0 60px rgba(232,129,28,0.18));
+}
+@media (max-width: 900px) {
+  .hero__mark {
+    width: 78vw;
+    right: 50%;
+    transform: translate(50%, -50%);
+    opacity: 0.13;
+  }
 }
 
 /* Optional photographic hero backdrop. Drop a licensed image at assets/hero.jpg
@@ -587,6 +603,7 @@ button, input, textarea { font: inherit; color: inherit; }
 }
 .footer__inner { display: grid; gap: 26px; }
 .footer__brand { display: inline-flex; align-items: center; gap: 11px; }
+.footer__brand .brand__mark { height: 24px; }
 .footer__brand .brand__name { font-size: 15px; letter-spacing: 0.28em; text-transform: uppercase; }
 .footer__links {
   display: flex;
