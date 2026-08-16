@@ -55,42 +55,51 @@
   if (yearEl) yearEl.textContent = String(new Date().getFullYear());
 
   /* ---- contact form ----
-     No backend by design. On submit we compose a mailto: so the message
-     opens in the visitor's mail client. To wire a real endpoint instead
-     (Formspree, your API, etc.), replace the body of handleSubmit().     */
-  var CONTACT_EMAIL = "contact@scrye.example"; // <- replace with real inbox
+     Posts to FormSubmit. With JS on, we submit via fetch and stay on the page;
+     with JS off, the form's native action still delivers. */
   var form = document.getElementById("contactForm");
   var note = document.getElementById("formNote");
+  var val = function (sel) {
+    var el = form.querySelector(sel);
+    return el ? el.value.trim() : "";
+  };
 
-  function handleSubmit(e) {
-    e.preventDefault();
-    var name = form.name.value.trim();
-    var org = form.org.value.trim();
-    var email = form.email.value.trim();
-    var message = form.message.value.trim();
+  if (form) {
+    form.addEventListener("submit", function (e) {
+      var name = val('[name="name"]');
+      var email = val('[name="email"]');
+      if (!name || !email) {
+        e.preventDefault();
+        note.textContent = "Please add your name and email.";
+        note.classList.remove("is-ok");
+        return;
+      }
+      if (!window.fetch) return; // no fetch → let the native POST proceed
 
-    if (!name || !email) {
-      note.textContent = "Please add your name and email.";
+      e.preventDefault();
+      note.textContent = "Sending…";
       note.classList.remove("is-ok");
-      return;
-    }
-
-    var subject = "Briefing request — " + name + (org ? " (" + org + ")" : "");
-    var body =
-      "Name: " + name + "\n" +
-      "Organization: " + (org || "—") + "\n" +
-      "Email: " + email + "\n\n" +
-      (message || "(no message)");
-
-    window.location.href =
-      "mailto:" + CONTACT_EMAIL +
-      "?subject=" + encodeURIComponent(subject) +
-      "&body=" + encodeURIComponent(body);
-
-    note.textContent = "Opening your mail client…";
-    note.classList.add("is-ok");
-    form.reset();
+      fetch("https://formsubmit.co/ajax/info@scryeinsights.com", {
+        method: "POST",
+        headers: { "Content-Type": "application/json", "Accept": "application/json" },
+        body: JSON.stringify({
+          name: name,
+          organization: val('[name="organization"]'),
+          email: email,
+          message: val('[name="message"]'),
+          _subject: "New inquiry from scryeinsights.com"
+        })
+      })
+        .then(function (r) { return r.json(); })
+        .then(function () {
+          note.textContent = "Thanks — we'll be in touch.";
+          note.classList.add("is-ok");
+          form.reset();
+        })
+        .catch(function () {
+          note.textContent = "Something went wrong — email info@scryeinsights.com directly.";
+          note.classList.remove("is-ok");
+        });
+    });
   }
-
-  if (form) form.addEventListener("submit", handleSubmit);
 })();

@@ -69,8 +69,8 @@
         <p class="eyebrow"><span class="eyebrow__dot"></span>Geospatial change detection · decision intelligence</p>
         <h1 class="hero__title">Reveal What's Hidden.</h1>
         <p class="hero__lead">
-          Scrye turns imagery and elevation into decisions you can trust —
-          for the teams who have to act on what's changing on the ground,
+          Scrye compares imagery over time to show exactly what changed —
+          and how far to trust it — turning raw imagery into decisions,
           online or fully offline.
         </p>
         <div class="hero__actions">
@@ -350,15 +350,37 @@
           <p class="eyebrow"><span class="eyebrow__idx">06</span>Contact</p>
           <h2 class="section__title">Briefings by request.</h2>
           <p class="contact__lead">
-            We work with a select group of partners — across defense and commercial alike —
-            who need to turn imagery into decisions they can stand behind.
+            We work with a select group of partners who need to turn imagery
+            into decisions they can stand behind. Tell us a little about you.
           </p>
         </div>
 
         <div class="contact__panel">
-          <p class="contact__soon"><span class="pulse"></span>Get in touch</p>
-          <p class="contact__soonsub">For briefings and inquiries, reach us directly.</p>
-          <p class="contact__direct"><a href="mailto:info@scryeinsights.com">info@scryeinsights.com</a></p>
+          <form id="contactForm" class="contact__form" action="https://formsubmit.co/info@scryeinsights.com" method="POST">
+            <input type="hidden" name="_subject" value="New inquiry from scryeinsights.com" />
+            <input type="hidden" name="_captcha" value="false" />
+            <input type="hidden" name="_template" value="table" />
+            <input type="hidden" name="_next" value="https://scryeinsights.com/" />
+            <input type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px" />
+            <div class="field">
+              <label for="cf-name">Name</label>
+              <input id="cf-name" name="name" type="text" required autocomplete="name" />
+            </div>
+            <div class="field">
+              <label for="cf-org">Organization</label>
+              <input id="cf-org" name="organization" type="text" autocomplete="organization" />
+            </div>
+            <div class="field">
+              <label for="cf-email">Email</label>
+              <input id="cf-email" name="email" type="email" required autocomplete="email" />
+            </div>
+            <div class="field">
+              <label for="cf-message">How can we help?</label>
+              <textarea id="cf-message" name="message" rows="4"></textarea>
+            </div>
+            <button class="btn btn--primary btn--block" type="submit">Request a briefing</button>
+            <p class="form-note" id="formNote" role="status" aria-live="polite"></p>
+          </form>
         </div>
       </div>
     </section>
