@@ -5,23 +5,9 @@
    ============================================================ */
 
 @font-face {
-  font-family: "Space Grotesk";
-  src: url("assets/space-grotesk.woff2") format("woff2");
-  font-weight: 300 700;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Space Mono";
-  src: url("assets/space-mono.woff2") format("woff2");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Space Mono";
-  src: url("assets/space-mono-bold.woff2") format("woff2");
-  font-weight: 700;
+  font-family: "Archivo";
+  src: url("assets/archivo.woff2") format("woff2");
+  font-weight: 100 900;
   font-style: normal;
   font-display: swap;
 }
@@ -41,8 +27,8 @@
   --accent-soft: rgba(232, 129, 28, 0.12);
 
   /* type */
-  --font-sans: "Space Grotesk", system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  --font-mono: "Space Mono", ui-monospace, "SF Mono", "Cascadia Code", "Consolas", monospace;
+  --font-sans: "Archivo", system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-mono: "Archivo", ui-monospace, "SF Mono", "Cascadia Code", "Consolas", monospace;
 
   /* layout */
   --maxw: 1160px;
