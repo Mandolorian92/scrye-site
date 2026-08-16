@@ -79,7 +79,7 @@
       e.preventDefault();
       note.textContent = "Sending…";
       note.classList.remove("is-ok");
-      fetch("https://formsubmit.co/ajax/info@scryeinsights.com", {
+      fetch("https://formsubmit.co/ajax/c0872cd69e478d45a5770e12d210d9a6", {
         method: "POST",
         headers: { "Content-Type": "application/json", "Accept": "application/json" },
         body: JSON.stringify({
@@ -97,7 +97,7 @@
           form.reset();
         })
         .catch(function () {
-          note.textContent = "Something went wrong — email info@scryeinsights.com directly.";
+          note.textContent = "Something went wrong — please try again in a moment.";
           note.classList.remove("is-ok");
         });
     });
