@@ -1,0 +1,10 @@
+{
+  "checked_actions": {
+    "actions/checkout": "v4",
+    "actions/configure-pages": "v5",
+    "actions/upload-pages-artifact": "v3",
+    "actions/deploy-pages": "v4"
+  },
+  "advisory_database_size": 57,
+  "hits": []
+}

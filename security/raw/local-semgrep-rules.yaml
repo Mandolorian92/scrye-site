@@ -1,0 +1,92 @@
+rules:
+  - id: python-subprocess-shell-true
+    languages: [python]
+    severity: ERROR
+    message: >-
+      subprocess call with shell=True — if any part of the command is built from
+      external input this is shell injection. Prefer a list-form argv with shell=False
+      (the default).
+    patterns:
+      - pattern-either:
+          - pattern: subprocess.$FUNC(..., shell=True, ...)
+          - pattern: subprocess.$FUNC($CMD, shell=True)
+
+  - id: python-eval-exec
+    languages: [python]
+    severity: ERROR
+    message: >-
+      Use of eval()/exec() on dynamic data is a common code-injection vector.
+    patterns:
+      - pattern-either:
+          - pattern: eval(...)
+          - pattern: exec(...)
+
+  - id: python-pickle-load
+    languages: [python]
+    severity: WARNING
+    message: >-
+      pickle.load/loads on untrusted input allows arbitrary code execution during
+      deserialization. Safe only if the source is fully trusted and never
+      externally reachable.
+    patterns:
+      - pattern-either:
+          - pattern: pickle.load(...)
+          - pattern: pickle.loads(...)
+
+  - id: python-yaml-load-unsafe
+    languages: [python]
+    severity: WARNING
+    message: >-
+      yaml.load() without Loader=yaml.SafeLoader can execute arbitrary Python
+      objects embedded in the YAML.
+    pattern: yaml.load($X)
+
+  - id: python-hardcoded-secret-assignment
+    languages: [python]
+    severity: WARNING
+    message: >-
+      Variable name suggests a credential/secret assigned a literal string.
+      Verify this is a placeholder/example, not a real value.
+    patterns:
+      - pattern-regex: '(?i)(password|secret|api_key|apikey|access_key|private_key|token)\s*=\s*["\047][^"\047]{4,}["\047]'
+
+  - id: python-os-system
+    languages: [python]
+    severity: WARNING
+    message: >-
+      os.system() runs through a shell; prefer subprocess with a list argv.
+    pattern: os.system(...)
+
+  - id: python-assert-for-security-check
+    languages: [python]
+    severity: INFO
+    message: >-
+      assert used for a security-relevant check — assertions are stripped when
+      Python runs with -O, silently disabling the check.
+    patterns:
+      - pattern-either:
+          - pattern: assert $X == $PASSWORD
+          - pattern: assert $X.startswith(...)
+      - metavariable-regex:
+          metavariable: $PASSWORD
+          regex: (?i).*(password|token|secret|auth).*
+
+  - id: generic-hardcoded-aws-key
+    languages: [generic]
+    severity: ERROR
+    message: Possible hardcoded AWS access key ID literal.
+    pattern-regex: 'AKIA[0-9A-Z]{16}'
+
+  - id: generic-private-key-block
+    languages: [generic]
+    severity: ERROR
+    message: Possible embedded private key material.
+    pattern-regex: '-----BEGIN (RSA |EC |OPENSSH |DSA |)PRIVATE KEY-----'
+
+  - id: kotlin-hardcoded-secret-assignment
+    languages: [kotlin]
+    severity: WARNING
+    message: >-
+      Variable name suggests a credential/secret assigned a literal string.
+    patterns:
+      - pattern-regex: '(?i)val\s+(password|secret|apiKey|accessKey|privateKey|token)\s*[:=].*=\s*"[^"]{4,}"'

@@ -1,0 +1,9 @@
+version: 2
+updates:
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    open-pull-requests-limit: 5
+    # This is scrye-site's ONLY real dependency-management surface: it is a static
+    # HTML/CSS/JS site with zero package manifests (see security/REPORT.md).
