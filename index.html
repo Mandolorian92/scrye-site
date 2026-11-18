@@ -8,6 +8,8 @@
   <meta name="description" content="Scrye turns imagery and elevation into decision-ready intelligence — detecting change over time, grading its own confidence, and working online or fully offline." />
 
   <meta name="robots" content="noindex, nofollow" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://cloud.umami.is; connect-src 'self' https://cloud.umami.is https://formsubmit.co; img-src 'self' data:; style-src 'self'; font-src 'self'; form-action 'self' https://formsubmit.co; object-src 'none'; base-uri 'self';" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
 
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://scryeinsights.com/" />
@@ -23,7 +25,7 @@
 
   <meta name="theme-color" content="#0A0B0D" />
   <link rel="icon" type="image/png" href="assets/favicon.png" />
-  <link rel="stylesheet" href="styles.css?v=4" />
+  <link rel="stylesheet" href="styles.css?v=5" />
 </head>
 
 <body>
@@ -361,7 +363,7 @@
             <input type="hidden" name="_captcha" value="false" />
             <input type="hidden" name="_template" value="table" />
             <input type="hidden" name="_next" value="https://scryeinsights.com/" />
-            <input type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px" />
+            <input type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true" class="contact__honey" />
             <div class="field">
               <label for="cf-name">Name</label>
               <input id="cf-name" name="name" type="text" required autocomplete="name" />
